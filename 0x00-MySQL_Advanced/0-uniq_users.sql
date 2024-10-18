@@ -1,8 +1,6 @@
 -- This script creates a table following constraint
-CREATE TABLE users IF NOT EXISTS(
-    id int NOT NULL AUTO_INCREMENT,
-    email varchar(255) NOT NULL,
+CREATE TABLE IF NOT EXISTS users (
+    id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    email varchar(255) NOT NULL UNIQUE,
     name varchar(255),
-    PRIMARY KEY (id),
-    UNIQUE (email),
 );
